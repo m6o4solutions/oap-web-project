@@ -1,19 +1,19 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 type RootLayoutProps = {
-  children: ReactNode;
+	children: ReactNode;
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
-  return (
-    <div className="flex h-screen flex-col">
-      <header>Header Section</header>
+	return (
+		<div className="flex h-screen flex-col">
+			<header>Header Section</header>
 
-      <main>{children}</main>
+			<main>{children}</main>
 
-      <footer className="mt-auto">Footer Section</footer>
-    </div>
-  );
+			<footer className="mt-auto">Footer Section</footer>
+		</div>
+	);
 };
 
 export default RootLayout;
