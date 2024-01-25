@@ -1,5 +1,5 @@
 {
-  "name": "next-shadcn-ts-starter",
+  "name": "orly-airpark-web",
   "version": "2.0.1",
   "private": true,
   "scripts": {
@@ -17,7 +17,7 @@
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
     "framer-motion": "^11.0.3",
-    "lucide-react": "^0.314.0",
+    "lucide-react": "^0.315.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
