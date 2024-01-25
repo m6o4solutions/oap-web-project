@@ -50,4 +50,4 @@ We will eventually welcome contributions!.
 
 This project is licensed under the MIT License.
 
-Thank you for being a part of the Orly Airpark project! 🚀✨
+Thank you for being a part of the Orly Airpark website project! 🚀✨
