@@ -2,6 +2,7 @@ import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-blo
 import { NavigationHeaderBlock } from "@/components/blocks/navigation-header-block";
 
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import {
 	Sheet,
 	SheetContent,
@@ -9,16 +10,28 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
-import { Separator } from "@/components/ui/separator";
+
+import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
+import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
+import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
+import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
+import { PrivacyPolicyHeroWidget } from "@/components/widgets/privacy-policy-hero-widget";
+import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
 export {
 	NavigationFooterBlock,
 	NavigationHeaderBlock,
 	Button,
+	Separator,
 	Sheet,
 	SheetContent,
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
-	Separator,
+	AboutHeroWidget,
+	ContactHeroWidget,
+	HomeHeroWidget,
+	PilotsHeroWidget,
+	PrivacyPolicyHeroWidget,
+	ServicesHeroWidget,
 };
