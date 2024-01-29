@@ -43,6 +43,7 @@ const Layout = async ({ children }: LayoutProps) => {
 			<footer className="mt-auto">
 				<NavigationFooterBlock
 					siteName={siteName}
+					siteTagline={siteTagline}
 					navigationFooter={navigationFooter}
 				/>
 			</footer>

@@ -9,11 +9,13 @@ type NavigationFooterProps = {
 
 type NavigationFooterBlockProps = {
 	siteName: string;
+	siteTagline: string;
 	navigationFooter: NavigationFooterProps;
 };
 
 export const NavigationFooterBlock = ({
 	siteName,
+	siteTagline,
 	navigationFooter,
 }: NavigationFooterBlockProps) => {
 	const currentYear = new Date().getFullYear();
@@ -25,11 +27,17 @@ export const NavigationFooterBlock = ({
 			<Container>
 				{/* basement section start */}
 				<div className="flex flex-col items-center text-center">
-					{/* site name start */}
-					<Link href="/" className="text-lg font-semibold lg:text-2xl">
-						{siteName}
-					</Link>
-					{/* site name end */}
+					<div className="space-y-2">
+						{/* site name start */}
+						<Link href="/" className="text-lg font-semibold lg:text-2xl">
+							{siteName}
+						</Link>
+						{/* site name end */}
+
+						{/* site tagline start */}
+						<p className="text-sm font-medium">{siteTagline}</p>
+						{/* site tagline end */}
+					</div>
 
 					{/* navigation links start */}
 					<div className="-mx-3 mt-5 flex flex-wrap justify-center">
