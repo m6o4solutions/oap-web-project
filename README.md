@@ -1,8 +1,8 @@
-# Orly Airpark Solutions Website
+# Orly Airpark Website
 
-Welcome to the private repository for Orly Airpark official website. This
-repository houses the codebase for the dynamic and interactive website,
-showcasing our commitment to excellence in web development.
+Welcome to the private repository for the Orly Airpark website. This repository
+houses the codebase for the dynamic and interactive website, showcasing Superior
+Software Solutions' commitment to excellence in web development.
 
 ## Table of Contents
 
