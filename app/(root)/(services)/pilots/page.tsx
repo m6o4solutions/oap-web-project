@@ -1,9 +1,14 @@
 import { Container } from "@/components/container";
+import { PilotsHeroWidget } from "@/components/index";
 
 const PilotsPage = () => {
 	return (
 		<div className="mt-24">
-			<Container>Pilots Page</Container>
+			<Container>
+				<section className="py-5">
+					<PilotsHeroWidget />
+				</section>
+			</Container>
 		</div>
 	);
 };
