@@ -1,5 +1,5 @@
-const PilotServicesPage = () => {
-	return <div>Pilot Services Page</div>;
+const PilotPage = () => {
+	return <div>Pilot Page</div>;
 };
 
-export default PilotServicesPage;
+export default PilotPage;

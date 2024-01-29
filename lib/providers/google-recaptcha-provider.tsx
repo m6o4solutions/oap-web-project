@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { ReactNode } from 'react';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import { ReactNode } from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const sitekey = process.env.RECAPTCHA_SITE_KEY!;
 
@@ -16,7 +16,7 @@ export const RecaptchaProvider = ({ children }: RecaptchaProviderProps) => {
 			scriptProps={{
 				async: false,
 				defer: false,
-				appendTo: 'head',
+				appendTo: "head",
 				nonce: undefined,
 			}}
 		>
