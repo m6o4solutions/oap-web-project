@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
+import { RecaptchaProvider } from '@/lib/providers/google-recaptcha-provider';
 import { ToastProvider } from '@/lib/providers/toast-provider';
 
 import '@/app/styles/globals.css';
@@ -17,17 +18,19 @@ export const metadata: Metadata = {
 		template: '%s | Orly Airpark',
 	},
 	description:
-		"Explore top-notch aviation at Orly Airpark in Kenya's Rift Valley. Soar, train, and network with pilots in a stunning location. Join us today!",
+		"Orly Airpark: Where tranquility meets the sky. Immerse yourself in peaceful flying experiences amidst the natural wonders of Kenya's Rift Valley.",
 };
 
 const Layout = ({ children }: LayoutProps) => {
 	return (
 		<html lang="en">
 			<body className="scroll-smooth font-sans antialiased">
-				{children}
-				<Analytics />
-				<SpeedInsights />
-				<ToastProvider />
+				<RecaptchaProvider>
+					{children}
+					<Analytics />
+					<SpeedInsights />
+					<ToastProvider />
+				</RecaptchaProvider>
 			</body>
 		</html>
 	);
