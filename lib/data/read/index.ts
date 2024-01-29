@@ -1,0 +1,21 @@
+import { qryGlobal } from "@/lib/data/operations/queries";
+
+/* graphql endpoint */
+const endpoint = process.env.NEXT_PUBLIC_HIGH_PERFORMANCE_CONTENT_API!;
+
+/* get global data */
+export const getGlobal = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryGlobal }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.globals[0];
+	} catch (error) {
+		console.log("[GET_GLOBAL]", error);
+	}
+};
