@@ -40,12 +40,12 @@ export const NavigationFooterBlock = ({
 					</div>
 
 					{/* navigation links start */}
-					<div className="-mx-3 mt-5 flex flex-wrap justify-center">
+					<div className="-mx-2 mt-5 flex flex-wrap justify-center">
 						{navigationFooter.links.map((link, index) => (
 							<Button key={index} variant="link" asChild>
 								<Link
 									href={link.url}
-									className="mx-3 text-sm transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+									className="mx-2 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
 								>
 									{link.label}
 								</Link>
