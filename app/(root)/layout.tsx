@@ -13,10 +13,7 @@ type LayoutProps = {
 
 type GlobalDataProps = {
 	siteName: string;
-	siteMetaDescription: string;
-	siteLogo: string;
 	siteTagline: string;
-	siteContactDetails: { list: string[] };
 	navigationHeader: { links: { label: string; url: string }[] };
 	navigationFooter: { links: { label: string; url: string }[] };
 };
@@ -24,10 +21,7 @@ type GlobalDataProps = {
 const Layout = async ({ children }: LayoutProps) => {
 	const {
 		siteName,
-		siteMetaDescription,
-		siteLogo,
 		siteTagline,
-		siteContactDetails,
 		navigationHeader,
 		navigationFooter,
 	}: GlobalDataProps = await getGlobal();
@@ -35,7 +29,10 @@ const Layout = async ({ children }: LayoutProps) => {
 	return (
 		<div className="flex h-screen flex-col">
 			<header>
-				<NavigationHeaderBlock />
+				<NavigationHeaderBlock
+					siteName={siteName}
+					navigationHeader={navigationHeader}
+				/>
 			</header>
 
 			<main>{children}</main>
