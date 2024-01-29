@@ -1,5 +1,11 @@
-const PilotPage = () => {
-	return <div>Pilot Page</div>;
+import { Container } from "@/components/container";
+
+const PilotsPage = () => {
+	return (
+		<div className="mt-24">
+			<Container>Pilots Page</Container>
+		</div>
+	);
 };
 
-export default PilotPage;
+export default PilotsPage;

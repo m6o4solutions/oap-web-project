@@ -1,5 +1,11 @@
+import { Container } from "@/components/container";
+
 const ContactPage = () => {
-	return <div>Contact Page</div>;
+	return (
+		<div className="mt-24">
+			<Container>Contact Page</Container>
+		</div>
+	);
 };
 
 export default ContactPage;
