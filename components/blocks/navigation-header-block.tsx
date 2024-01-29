@@ -80,7 +80,7 @@ export const NavigationHeaderBlock = ({
 						{/* navigation side bar toggle end */}
 
 						{/* logo section start */}
-						<Link href="/" className="flex items-center space-x-1">
+						<Link href="/" className="flex items-center">
 							<h2 className="hidden text-2xl font-semibold lg:block">
 								{siteName}
 							</h2>
