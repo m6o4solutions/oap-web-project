@@ -10,8 +10,8 @@ export const HeaderDisplayBlock = ({
 	subtitle,
 }: HeaderDisplayBlockProps) => {
 	return (
-		<div className="space-y-3 md:text-center">
-			<Separator className="my-3" />
+		<div className="space-y-3">
+			<Separator className="mb-5" />
 
 			{/* title start */}
 			{title && (
@@ -29,7 +29,7 @@ export const HeaderDisplayBlock = ({
 			)}
 			{/* subtitle end */}
 
-			<Separator className="my-3" />
+			<Separator className="mt-5" />
 		</div>
 	);
 };
