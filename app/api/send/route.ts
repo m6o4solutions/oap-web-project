@@ -1,4 +1,4 @@
 import { NextResponse } from "next/server";
-import { GraphQLClient } from "graphql-request";
+import { Resend } from "resend";
 
 export async function POST(request: Request) {}

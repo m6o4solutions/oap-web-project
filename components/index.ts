@@ -1,3 +1,5 @@
+/* component blocks */
+import { ContactFormBlock } from "@/components/blocks/contact-form-block";
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
 import { HeaderDisplayBlock } from "@/components/blocks/header-display-block";
 import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
@@ -5,7 +7,26 @@ import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
 import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-block";
 import { NavigationHeaderBlock } from "@/components/blocks/navigation-header-block";
 
+/* shadcn ui elements */
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import {
 	Sheet,
@@ -14,7 +35,19 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+	Table,
+	TableBody,
+	TableCaption,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
 
+import { Textarea } from "@/components/ui/textarea";
+
+/* component widgets */
 import { AboutContentWidget } from "@/components/widgets/about-content-widget";
 import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
 import { ContactContentWidget } from "@/components/widgets/contact-content-widget";
@@ -29,6 +62,7 @@ import { ServicesContentWidget } from "@/components/widgets/services-content-wid
 import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
 export {
+	ContactFormBlock,
 	ContentDisplayBlock,
 	HeaderDisplayBlock,
 	HeroDisplayBlock,
@@ -36,12 +70,34 @@ export {
 	NavigationFooterBlock,
 	NavigationHeaderBlock,
 	Button,
+	Checkbox,
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
+	Input,
+	Label,
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
 	Separator,
 	Sheet,
 	SheetContent,
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
+	Table,
+	TableBody,
+	TableCaption,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+	Textarea,
 	AboutContentWidget,
 	AboutHeroWidget,
 	ContactContentWidget,
