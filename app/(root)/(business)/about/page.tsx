@@ -2,7 +2,7 @@ import { AboutContentWidget, AboutHeroWidget } from "@/components/index";
 
 const AboutPage = async () => {
 	return (
-		<article className="mt-28 space-y-8">
+		<article className="mt-24 space-y-8">
 			<section id="hero">
 				<AboutHeroWidget />
 			</section>
