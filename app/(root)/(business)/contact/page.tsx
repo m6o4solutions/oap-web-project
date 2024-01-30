@@ -1,10 +1,14 @@
-import { ContactHeroWidget } from "@/components/index";
+import { ContactContentWidget, ContactHeroWidget } from "@/components/index";
 
 const ContactPage = () => {
 	return (
 		<article className="mt-28 space-y-8">
 			<section id="hero">
 				<ContactHeroWidget />
+			</section>
+
+			<section id="content">
+				<ContactContentWidget />
 			</section>
 		</article>
 	);
