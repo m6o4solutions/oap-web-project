@@ -55,20 +55,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const PrivacyPolicyPage = async () => {
 	const {
-		pageTitle,
-		pageMetaDescription,
 		heroActionBlock,
 		pasHeaderContentImageListBlock,
 	}: PrivacyPolicyPageProps = await getPrivacyPolicyPage();
 
 	return (
-		<article className="mt-24">
-			<section id="hero" className="py-5">
-				<PrivacyPolicyHeroWidget />
+		<article className="mt-24 space-y-8">
+			<section id="hero">
+				<PrivacyPolicyHeroWidget heroActionBlock={heroActionBlock} />
 			</section>
 
-			<section id="content" className="py-5">
-				<PrivacyPolicyContentWidget />
+			<section id="content">
+				<PrivacyPolicyContentWidget
+					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+				/>
 			</section>
 		</article>
 	);

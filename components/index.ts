@@ -1,4 +1,5 @@
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
+import { HeaderDisplayBlock } from "@/components/blocks/header-display-block";
 import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
 import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
 import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-block";
@@ -24,6 +25,7 @@ import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
 export {
 	ContentDisplayBlock,
+	HeaderDisplayBlock,
 	HeroDisplayBlock,
 	ImageDisplayBlock,
 	NavigationFooterBlock,

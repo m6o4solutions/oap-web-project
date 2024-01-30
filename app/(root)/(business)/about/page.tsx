@@ -2,11 +2,11 @@ import { AboutHeroWidget } from "@/components/index";
 
 const AboutPage = () => {
 	return (
-		<div className="mt-24">
-			<section className="py-5">
+		<article className="mt-28 space-y-8">
+			<section id="hero">
 				<AboutHeroWidget />
 			</section>
-		</div>
+		</article>
 	);
 };
 

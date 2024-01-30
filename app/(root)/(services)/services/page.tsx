@@ -2,11 +2,11 @@ import { ServicesHeroWidget } from "@/components/index";
 
 const AirparkServicesPage = () => {
 	return (
-		<div className="mt-24">
-			<section className="py-5">
+		<article className="mt-28 space-y-8">
+			<section id="hero">
 				<ServicesHeroWidget />
 			</section>
-		</div>
+		</article>
 	);
 };
 

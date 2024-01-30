@@ -15,13 +15,9 @@ import {
 	SheetTrigger,
 } from "@/components/index";
 
-type NavigationHeaderProps = {
-	links: { label: string; url: string }[];
-};
-
 type NavigationHeaderBlockProps = {
 	siteName: string;
-	navigationHeader: NavigationHeaderProps;
+	navigationHeader: { links: { label: string; url: string }[] };
 };
 
 export const NavigationHeaderBlock = ({
@@ -94,7 +90,12 @@ export const NavigationHeaderBlock = ({
 						{/* navigation menu start */}
 						<div className="hidden lg:flex lg:items-center lg:justify-between">
 							{navigationHeader.links.map((link, index) => (
-								<Button key={index} variant="link" asChild>
+								<Button
+									key={index}
+									variant="link"
+									asChild
+									className="text-sm lg:text-base"
+								>
 									<Link
 										href={link.url}
 										className="mx-2 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"

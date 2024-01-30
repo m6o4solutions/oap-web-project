@@ -1,8 +1,8 @@
 import { ImageDisplayBlock } from "@/components";
 
 type HeroDisplayBlockProps = {
-	title: string;
-	subtitle: string;
+	title?: string;
+	subtitle?: string;
 	image: string;
 };
 
@@ -12,12 +12,16 @@ export const HeroDisplayBlock = ({
 	image,
 }: HeroDisplayBlockProps) => {
 	return (
-		<div className="relative">
+		<div className="relative h-96 w-full lg:h-[30rem]">
 			{/* image start */}
-			<div className="relative h-[30rem] w-full rounded-lg border">
+			<div className="relative h-full w-full rounded-lg border">
 				<ImageDisplayBlock imageSrc={image} imageAlt="Hero Image" />
 			</div>
 			{/* image end */}
+
+			{/* overlay start */}
+			<div className="absolute left-0 top-0 h-full w-full rounded-lg bg-black/20"></div>
+			{/* overlay end */}
 
 			{/* content start */}
 			{title && (
