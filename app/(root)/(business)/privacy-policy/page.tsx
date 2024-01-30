@@ -1,15 +1,76 @@
-import { Container } from "@/components/container";
-import { PrivacyPolicyHeroWidget } from "@/components/index";
+import { Metadata } from "next";
+import { getCldOgImageUrl } from "next-cloudinary";
 
-const PrivacyPolicyPage = () => {
+import { getPrivacyPolicyPage } from "@/lib/data/read";
+
+import {
+	PrivacyPolicyContentWidget,
+	PrivacyPolicyHeroWidget,
+} from "@/components";
+
+type PrivacyPolicyPageProps = {
+	pageTitle: string;
+	pageMetaDescription: string;
+	heroActionBlock: {
+		content: {
+			content: { header: { title: string } };
+			image: { public_id: string };
+		};
+	};
+	pasHeaderContentImageListBlock: {
+		header: {
+			content: {
+				header: { title: string; subtitle: string };
+				content: { html: string };
+			};
+		};
+	};
+};
+
+export async function generateMetadata(): Promise<Metadata> {
+	const {
+		pageTitle,
+		pageMetaDescription,
+		heroActionBlock,
+	}: PrivacyPolicyPageProps = await getPrivacyPolicyPage();
+
+	return {
+		title: pageTitle,
+		description: pageMetaDescription,
+		openGraph: {
+			type: "article",
+			images: [
+				{
+					width: 1200,
+					height: 630,
+					url: getCldOgImageUrl({
+						src: heroActionBlock.content.image.public_id,
+						format: "jpg",
+					}),
+				},
+			],
+		},
+	};
+}
+
+const PrivacyPolicyPage = async () => {
+	const {
+		heroActionBlock,
+		pasHeaderContentImageListBlock,
+	}: PrivacyPolicyPageProps = await getPrivacyPolicyPage();
+
 	return (
-		<div className="mt-24">
-			<Container>
-				<section className="py-5">
-					<PrivacyPolicyHeroWidget />
-				</section>
-			</Container>
-		</div>
+		<article className="mt-24 space-y-8">
+			<section id="hero">
+				<PrivacyPolicyHeroWidget heroActionBlock={heroActionBlock} />
+			</section>
+
+			<section id="content">
+				<PrivacyPolicyContentWidget
+					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+				/>
+			</section>
+		</article>
 	);
 };
 

@@ -1,15 +1,12 @@
-import { Container } from "@/components/container";
 import { ContactHeroWidget } from "@/components/index";
 
 const ContactPage = () => {
 	return (
-		<div className="mt-24">
-			<Container>
-				<section className="py-5">
-					<ContactHeroWidget />
-				</section>
-			</Container>
-		</div>
+		<article className="mt-28 space-y-8">
+			<section id="hero">
+				<ContactHeroWidget />
+			</section>
+		</article>
 	);
 };
 
