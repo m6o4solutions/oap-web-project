@@ -6,7 +6,7 @@ import { getPrivacyPolicyPage } from "@/lib/data/read";
 import {
 	PrivacyPolicyContentWidget,
 	PrivacyPolicyHeroWidget,
-} from "@/components";
+} from "@/components/index";
 
 type PrivacyPolicyPageProps = {
 	pageTitle: string;

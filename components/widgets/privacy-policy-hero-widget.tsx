@@ -1,4 +1,4 @@
-import { HeroDisplayBlock } from "@/components";
+import { HeroDisplayBlock } from "@/components/index";
 
 type PrivacyPolicyHeroWidgetProps = {
 	heroActionBlock: {
@@ -13,7 +13,7 @@ export const PrivacyPolicyHeroWidget = ({
 	heroActionBlock,
 }: PrivacyPolicyHeroWidgetProps) => {
 	return (
-		<div className="px-2">
+		<div className="mx-1">
 			<HeroDisplayBlock
 				title={heroActionBlock.content.content.header.title}
 				image={heroActionBlock.content.image.public_id}

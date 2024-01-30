@@ -2,7 +2,10 @@ import { ReactNode } from "react";
 
 import { getGlobal } from "@/lib/data/read/index";
 
-import { NavigationFooterBlock, NavigationHeaderBlock } from "@/components";
+import {
+	NavigationFooterBlock,
+	NavigationHeaderBlock,
+} from "@/components/index";
 
 type GlobalDataProps = {
 	siteName: string;
