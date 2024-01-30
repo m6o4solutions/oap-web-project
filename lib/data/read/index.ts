@@ -1,4 +1,8 @@
-import { qryGlobal, qryPrivacyPolicyPage } from "@/lib/data/operations/queries";
+import {
+	qryContactPage,
+	qryGlobal,
+	qryPrivacyPolicyPage,
+} from "@/lib/data/operations/queries";
 
 /* graphql endpoint */
 const endpoint = process.env.NEXT_PUBLIC_HIGH_PERFORMANCE_CONTENT_API!;
@@ -34,5 +38,22 @@ export const getPrivacyPolicyPage = async () => {
 		return data.pages[0];
 	} catch (error) {
 		console.log("[GET_PRIVACY_POLICY_PAGE]", error);
+	}
+};
+
+/* get contact page data */
+export const getContactPage = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryContactPage }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.pages[0];
+	} catch (error) {
+		console.log("[GET_CONTACT_PAGE]", error);
 	}
 };
