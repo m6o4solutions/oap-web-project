@@ -1,4 +1,4 @@
-import { HeroDisplayBlock } from "@/components";
+import { HeroDisplayBlock } from "@/components/index";
 
 type PrivacyPolicyHeroWidgetProps = {
 	heroActionBlock: {
