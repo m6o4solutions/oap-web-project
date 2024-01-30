@@ -1,4 +1,4 @@
-import { ImageDisplayBlock } from "@/components";
+import { ImageDisplayBlock } from "@/components/index";
 
 type HeroDisplayBlockProps = {
 	title?: string;

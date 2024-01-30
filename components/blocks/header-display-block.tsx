@@ -1,4 +1,4 @@
-import { Separator } from "@/components";
+import { Separator } from "@/components/index";
 
 type HeaderDisplayBlockProps = {
 	title?: string;
