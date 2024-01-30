@@ -1,3 +1,5 @@
+import { Container } from "@/components/container";
+
 export const ServicesHeroWidget = () => {
-	return <div>Services Hero Widget</div>;
+	return <Container>Services Hero Widget</Container>;
 };

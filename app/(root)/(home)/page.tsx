@@ -1,15 +1,12 @@
-import { Container } from "@/components/container";
-import { HomeHeroWidget } from "@/components/index";
+import { HomeHeroWidget } from "@/components";
 
 const HomePage = async () => {
 	return (
-		<div className="mt-24">
-			<Container>
-				<section className="py-5">
-					<HomeHeroWidget />
-				</section>
-			</Container>
-		</div>
+		<article className="mt-28 space-y-8">
+			<section id="hero">
+				<HomeHeroWidget />
+			</section>
+		</article>
 	);
 };
 
