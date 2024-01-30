@@ -8,6 +8,8 @@ import { ToastProvider } from "@/lib/providers/toast-provider";
 
 import "@/app/styles/globals.css";
 
+export const revalidate = 60;
+
 type RootLayoutProps = {
 	children: ReactNode;
 };

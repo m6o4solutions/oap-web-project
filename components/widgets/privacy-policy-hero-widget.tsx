@@ -1,3 +1,5 @@
+import { Container } from "@/components/container";
+
 export const PrivacyPolicyHeroWidget = () => {
-	return <div>Privacy Policy Hero Widget</div>;
+	return <Container>Privacy Policy Hero Widget</Container>;
 };

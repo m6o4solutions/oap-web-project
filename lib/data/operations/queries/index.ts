@@ -1,6 +1,6 @@
 import { gql } from "graphql-request";
 
-/* retrieve global data */
+/* query to retrieve global data */
 export const qryGlobal = gql`
 	query qryGlobal {
 		globals(where: { siteName: "Orly Airpark" }) {
