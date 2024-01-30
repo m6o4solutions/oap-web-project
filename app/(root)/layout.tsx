@@ -2,20 +2,17 @@ import { ReactNode } from "react";
 
 import { getGlobal } from "@/lib/data/read/index";
 
-import {
-	NavigationFooterBlock,
-	NavigationHeaderBlock,
-} from "@/components/index";
-
-type LayoutProps = {
-	children: ReactNode;
-};
+import { NavigationFooterBlock, NavigationHeaderBlock } from "@/components";
 
 type GlobalDataProps = {
 	siteName: string;
 	siteTagline: string;
 	navigationHeader: { links: { label: string; url: string }[] };
 	navigationFooter: { links: { label: string; url: string }[] };
+};
+
+type LayoutProps = {
+	children: ReactNode;
 };
 
 const Layout = async ({ children }: LayoutProps) => {

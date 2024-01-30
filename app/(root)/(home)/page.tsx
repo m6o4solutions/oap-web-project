@@ -1,4 +1,4 @@
-import { HomeHeroWidget } from "@/components/index";
+import { HomeHeroWidget } from "@/components";
 
 const HomePage = async () => {
 	return (

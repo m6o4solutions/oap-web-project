@@ -39,7 +39,6 @@ export const qryPrivacyPolicyPage = gql`
 	query qryPrivacyPolicyPage {
 		pages(where: { slug: "privacy-policy" }) {
 			pageTitle
-			slug
 			pageMetaDescription
 			heroActionBlock {
 				content {

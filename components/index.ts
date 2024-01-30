@@ -1,3 +1,6 @@
+import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
+import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
+import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
 import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-block";
 import { NavigationHeaderBlock } from "@/components/blocks/navigation-header-block";
 
@@ -15,10 +18,14 @@ import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
 import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
+import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
 import { PrivacyPolicyHeroWidget } from "@/components/widgets/privacy-policy-hero-widget";
 import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
 export {
+	ContentDisplayBlock,
+	HeroDisplayBlock,
+	ImageDisplayBlock,
 	NavigationFooterBlock,
 	NavigationHeaderBlock,
 	Button,
@@ -32,6 +39,7 @@ export {
 	ContactHeroWidget,
 	HomeHeroWidget,
 	PilotsHeroWidget,
+	PrivacyPolicyContentWidget,
 	PrivacyPolicyHeroWidget,
 	ServicesHeroWidget,
 };

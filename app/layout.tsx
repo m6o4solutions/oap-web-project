@@ -10,17 +10,24 @@ import "@/app/styles/globals.css";
 
 export const revalidate = 60;
 
-type RootLayoutProps = {
-	children: ReactNode;
-};
+/* get the url depending on the environment */
+const absoluteUrl =
+	process.env.NODE_ENV === "production"
+		? process.env.NEXT_PUBLIC_PRODUCTION_URL!
+		: process.env.NEXT_PUBLIC_DEVELOPMENT_URL!;
 
 export const metadata: Metadata = {
+	metadataBase: new URL(absoluteUrl),
 	title: {
 		default: "Orly Airpark",
 		template: "%s | Orly Airpark",
 	},
 	description:
 		"Orly Airpark: Where tranquility meets the sky. Immerse yourself in peaceful flying experiences amidst the natural wonders of Kenya's Rift Valley.",
+};
+
+type RootLayoutProps = {
+	children: ReactNode;
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
