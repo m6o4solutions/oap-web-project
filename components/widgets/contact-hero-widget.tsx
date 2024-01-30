@@ -1,5 +1,23 @@
-import { Container } from "@/components/container";
+import { HeroDisplayBlock } from "@/components/index";
 
-export const ContactHeroWidget = () => {
-	return <Container>Contact Hero Widget</Container>;
+type ContactHeroWidgetProps = {
+	heroActionBlock: {
+		content: {
+			content: { header: { title: string } };
+			image: { public_id: string };
+		};
+	};
+};
+
+export const ContactHeroWidget = ({
+	heroActionBlock,
+}: ContactHeroWidgetProps) => {
+	return (
+		<div className="mx-1">
+			<HeroDisplayBlock
+				title={heroActionBlock.content.content.header.title}
+				image={heroActionBlock.content.image.public_id}
+			/>
+		</div>
+	);
 };

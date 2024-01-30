@@ -66,3 +66,36 @@ export const qryPrivacyPolicyPage = gql`
 		}
 	}
 `;
+
+/* query to retrieve contact page data */
+export const qryContactPage = gql`
+	query qryContactPage {
+		pages(where: { slug: "contact" }) {
+			pageTitle
+			pageMetaDescription
+			heroActionBlock {
+				content {
+					content {
+						header {
+							title
+						}
+					}
+					image
+				}
+			}
+			pasHeaderContentImageListBlock {
+				header {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
+		}
+	}
+`;

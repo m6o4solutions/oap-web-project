@@ -1,10 +1,14 @@
-import { AboutHeroWidget } from "@/components/index";
+import { AboutContentWidget, AboutHeroWidget } from "@/components/index";
 
-const AboutPage = () => {
+const AboutPage = async () => {
 	return (
-		<article className="mt-28 space-y-8">
+		<article className="mt-24 space-y-8">
 			<section id="hero">
 				<AboutHeroWidget />
+			</section>
+
+			<section id="content">
+				<AboutContentWidget />
 			</section>
 		</article>
 	);
