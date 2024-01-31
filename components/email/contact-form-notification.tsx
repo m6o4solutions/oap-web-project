@@ -1,10 +1,10 @@
 type ContactFormNotificationProps = {
-	firstName: string;
-	lastName: string;
-	emailAddress: string;
-	telephoneNumber: string;
-	messageTitle: string;
-	messageContent: string;
+	readonly firstName: string;
+	readonly lastName: string;
+	readonly emailAddress: string;
+	readonly telephoneNumber?: string;
+	readonly messageTitle: string;
+	readonly messageContent: string;
 };
 
 export const ContactFormNotification = ({

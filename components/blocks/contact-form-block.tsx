@@ -90,7 +90,7 @@ export const ContactFormBlock = () => {
 
 				const postEndpoint = "/api/contact-form";
 
-				const emailEndpoint = "/api/send/contact-form";
+				const emailEndpoint = "/api/send";
 
 				/* post values + reCAPTCHA token to the backend */
 				await fetch(postEndpoint, {
@@ -104,7 +104,7 @@ export const ContactFormBlock = () => {
 
 				/* redirect to home page after a slight delay */
 				setTimeout(() => {
-					router.push("/home");
+					router.push("/");
 				}, 3400);
 
 				/* show success toast */

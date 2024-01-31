@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
-const sitekey = process.env.RECAPTCHA_SITE_KEY!;
+const sitekey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 
 type RecaptchaProviderProps = {
 	children: ReactNode;
