@@ -61,6 +61,7 @@ import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget"
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
 import { PrivacyPolicyHeroWidget } from "@/components/widgets/privacy-policy-hero-widget";
+import { ServicesCardWidget } from "@/components/widgets/services-card-widget";
 import { ServicesContentWidget } from "@/components/widgets/services-content-widget";
 import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
@@ -112,6 +113,7 @@ export {
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
 	PrivacyPolicyHeroWidget,
+	ServicesCardWidget,
 	ServicesContentWidget,
 	ServicesHeroWidget,
 };
