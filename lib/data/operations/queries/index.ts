@@ -99,3 +99,52 @@ export const qryContactPage = gql`
 		}
 	}
 `;
+
+/* query to retrieve services page data */
+export const qryServicesPage = gql`
+	query qryServicesPage {
+		pages(where: { slug: "services" }) {
+			pageTitle
+			pageMetaDescription
+			heroActionBlock {
+				content {
+					content {
+						header {
+							title
+						}
+					}
+					image
+				}
+			}
+			pasHeaderContentImageListBlock {
+				header {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
+		}
+	}
+`;
+
+/* query to retrieve all services data */
+export const qryAllServices = gql`
+	query qryAllServices {
+		services {
+			businessName
+			businessLogo
+			businessDescription {
+				html
+			}
+			telephoneNumber
+			emailAddress
+			website
+		}
+	}
+`;

@@ -28,7 +28,7 @@ export const HeroDisplayBlock = ({
 				<div className="absolute left-1/2 top-1/2 w-72 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-black/70 px-5 py-3 text-center lg:w-auto">
 					<div className="text-white">
 						{/* title start */}
-						<h1 className="mb-3 text-3xl font-semibold tracking-wide lg:text-4xl">
+						<h1 className="mb-3 text-pretty text-3xl font-semibold tracking-wide lg:text-4xl">
 							{title}
 						</h1>
 						{/* title end */}
