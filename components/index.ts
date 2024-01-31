@@ -7,6 +7,9 @@ import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
 import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-block";
 import { NavigationHeaderBlock } from "@/components/blocks/navigation-header-block";
 
+/* notification components */
+import { ContactFormNotification } from "@/components/email/contact-form-notification";
+
 /* shadcn ui elements */
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -69,6 +72,7 @@ export {
 	ImageDisplayBlock,
 	NavigationFooterBlock,
 	NavigationHeaderBlock,
+	ContactFormNotification,
 	Button,
 	Checkbox,
 	Form,
