@@ -2,6 +2,7 @@ import {
 	qryContactPage,
 	qryGlobal,
 	qryPrivacyPolicyPage,
+	qryServicesPage,
 } from "@/lib/data/operations/queries";
 
 /* graphql endpoint */
@@ -55,5 +56,22 @@ export const getContactPage = async () => {
 		return data.pages[0];
 	} catch (error) {
 		console.log("[GET_CONTACT_PAGE]", error);
+	}
+};
+
+/* get contact page data */
+export const getServicesPage = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryServicesPage }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.pages[0];
+	} catch (error) {
+		console.log("[GET_SERVICES_PAGE]", error);
 	}
 };
