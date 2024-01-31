@@ -132,3 +132,19 @@ export const qryServicesPage = gql`
 		}
 	}
 `;
+
+/* query to retrieve all services data */
+export const qryAllServices = gql`
+	query qryAllServices {
+		services {
+			businessName
+			businessLogo
+			businessDescription {
+				html
+			}
+			telephoneNumber
+			emailAddress
+			website
+		}
+	}
+`;

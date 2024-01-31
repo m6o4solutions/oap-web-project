@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 
-import { getServicesPage } from "@/lib/data/read";
+import { getAllServices, getServicesPage } from "@/lib/data/read";
 
 import { ServicesContentWidget, ServicesHeroWidget } from "@/components/index";
 
@@ -22,6 +22,17 @@ type ServicesPageProps = {
 			};
 		};
 	};
+};
+
+type AllServicesProps = {
+	businessName: string;
+	businessLogo: { public_id: string };
+	businessDescription: {
+		html: string;
+	};
+	telephoneNumber: string;
+	emailAddress: string;
+	website: string;
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -51,6 +62,8 @@ const ServicesPage = async () => {
 	const { heroActionBlock, pasHeaderContentImageListBlock }: ServicesPageProps =
 		await getServicesPage();
 
+	const services: AllServicesProps[] = await getAllServices();
+
 	return (
 		<article className="mt-24 space-y-8">
 			<section id="hero">
@@ -60,6 +73,7 @@ const ServicesPage = async () => {
 			<section id="content">
 				<ServicesContentWidget
 					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+					services={services}
 				/>
 			</section>
 		</article>

@@ -1,4 +1,5 @@
 import {
+	qryAllServices,
 	qryContactPage,
 	qryGlobal,
 	qryPrivacyPolicyPage,
@@ -59,7 +60,7 @@ export const getContactPage = async () => {
 	}
 };
 
-/* get contact page data */
+/* get services page data */
 export const getServicesPage = async () => {
 	try {
 		const result = await fetch(endpoint, {
@@ -73,5 +74,22 @@ export const getServicesPage = async () => {
 		return data.pages[0];
 	} catch (error) {
 		console.log("[GET_SERVICES_PAGE]", error);
+	}
+};
+
+/* get all services */
+export const getAllServices = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryAllServices }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.services;
+	} catch (error) {
+		console.log("[GET_ALL_SERVICES]", error);
 	}
 };
