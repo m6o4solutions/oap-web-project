@@ -68,17 +68,61 @@ export const ContactFormBlock = () => {
 
 	const { executeRecaptcha } = useGoogleReCaptcha();
 
-	const handleRequest = async (values: z.infer<typeof formSchema>) => {
-		try {
-			console.log(values);
+	const handleRequest = useCallback(
+		async (values: z.infer<typeof formSchema>) => {
+			if (!executeRecaptcha) {
+				console.error("Could not get the reCAPTCHA token.");
+				return;
+			}
 
-			/* show success toast */
-			toast.success("Thank you! We'll be in touch soon.");
-		} catch (error) {
-			/* the response was not successful */
-			toast.error("An unknown error has occured. Please try again.");
-		}
-	};
+			try {
+				/* get token from the reCAPTCHA servers */
+				const gRecaptchaToken = await executeRecaptcha("ContactForm");
+
+				console.log("reCAPTCHA token: ", gRecaptchaToken);
+
+				/* the reCAPTCHA token was not generated */
+				if (!gRecaptchaToken) {
+					return;
+				}
+
+				const token = { gRecaptchaToken: gRecaptchaToken };
+
+				const postEndpoint = "/api/contact-form";
+
+				const emailEndpoint = "/api/send/contact-form";
+
+				/* post values + reCAPTCHA token to the backend */
+				await fetch(postEndpoint, {
+					method: "POST",
+					body: JSON.stringify({ ...values, ...token }),
+					headers: { "Content-Type": "application/json" },
+				});
+
+				/* the response was successful */
+				router.refresh();
+
+				/* redirect to home page after a slight delay */
+				setTimeout(() => {
+					router.push("/home");
+				}, 3400);
+
+				/* show success toast */
+				toast.success("Thank you! We'll be in touch soon.");
+
+				/* send notification email */
+				await fetch(emailEndpoint, {
+					method: "POST",
+					body: JSON.stringify({ ...values }),
+					headers: { "Content-Type": "application/json" },
+				});
+			} catch (error) {
+				/* the response was not successful */
+				toast.error("An unknown error has occured. Please try again.");
+			}
+		},
+		[executeRecaptcha, router],
+	);
 
 	return (
 		<section className="mx-auto max-w-4xl rounded-md bg-secondary p-3 dark:bg-transparent">
