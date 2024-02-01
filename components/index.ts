@@ -54,10 +54,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { AboutContentWidget } from "@/components/widgets/about-content-widget";
 import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
 import { ContactContentWidget } from "@/components/widgets/contact-content-widget";
+import { ContactDetailsWidget } from "@/components/widgets/contact-details-widget";
 import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
+import { PilotsDownloadsListWidget } from "@/components/widgets/pilots-downloads-list-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
 import { PrivacyPolicyHeroWidget } from "@/components/widgets/privacy-policy-hero-widget";
@@ -106,10 +108,12 @@ export {
 	AboutContentWidget,
 	AboutHeroWidget,
 	ContactContentWidget,
+	ContactDetailsWidget,
 	ContactHeroWidget,
 	HomeContentWidget,
 	HomeHeroWidget,
 	PilotsContentWidget,
+	PilotsDownloadsListWidget,
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
 	PrivacyPolicyHeroWidget,

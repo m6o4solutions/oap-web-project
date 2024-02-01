@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 
-import { getAllServices, getServicesPage } from "@/lib/data/read";
+import { getAllServices, getServicesPage } from "@/lib/data/read/index";
 
 import { ServicesContentWidget, ServicesHeroWidget } from "@/components/index";
 
