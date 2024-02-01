@@ -3,6 +3,7 @@ import {
 	qryAllServices,
 	qryContactPage,
 	qryGlobal,
+	qryHomePage,
 	qryPilotsPage,
 	qryPrivacyPolicyPage,
 	qryServicesPage,
@@ -127,5 +128,22 @@ export const getAboutPage = async () => {
 		return data.pages[0];
 	} catch (error) {
 		console.log("[GET_ABOUT_PAGE]", error);
+	}
+};
+
+/* get home page data */
+export const getHomePage = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryHomePage }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.pages[0];
+	} catch (error) {
+		console.log("[GET_HOME_PAGE]", error);
 	}
 };
