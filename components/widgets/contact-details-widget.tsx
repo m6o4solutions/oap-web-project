@@ -18,7 +18,7 @@ export const ContactDetailsWidget = ({
 }: ContactDetailsWidgetProps) => {
 	return (
 		<div className="mx-auto max-w-full rounded-lg border bg-secondary p-3 dark:bg-transparent">
-			<p className="mb-3 text-lg font-semibold tracking-wide">
+			<p className="mb-3 text-lg font-semibold uppercase tracking-wide">
 				Contact Details
 			</p>
 

@@ -26,7 +26,7 @@ export const PilotsFeesTableWidget = ({ fees }: PilotsFeesTableWidgetProps) => {
 	return (
 		<>
 			{fees.map((fee, index) => (
-				<Table key={index}>
+				<Table key={index} className="my-3">
 					<TableCaption className="font-medium uppercase">
 						{fee.title}
 					</TableCaption>

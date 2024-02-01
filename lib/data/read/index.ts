@@ -1,4 +1,5 @@
 import {
+	qryAboutPage,
 	qryAllServices,
 	qryContactPage,
 	qryGlobal,
@@ -109,5 +110,22 @@ export const getPilotsPage = async () => {
 		return data.pages[0];
 	} catch (error) {
 		console.log("[GET_PILOTS_PAGE]", error);
+	}
+};
+
+/* get about page data */
+export const getAboutPage = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryAboutPage }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.pages[0];
+	} catch (error) {
+		console.log("[GET_ABOUT_PAGE]", error);
 	}
 };

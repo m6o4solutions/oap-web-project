@@ -216,3 +216,63 @@ export const qryPilotsPage = gql`
 		}
 	}
 `;
+
+/* query to retrieve about page data */
+export const qryAboutPage = gql`
+	query qryPilotsPage {
+		pages(where: { slug: "about" }) {
+			pageTitle
+			pageMetaDescription
+			heroActionBlock {
+				content {
+					content {
+						header {
+							title
+						}
+					}
+					image
+				}
+			}
+			pasHeaderContentImageListBlock {
+				header {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+				list {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
+			galleryHeaderGalleryBlock {
+				header {
+					title
+					subtitle
+				}
+				gallery
+			}
+			benefitsHeaderContentBlock {
+				header {
+					title
+					subtitle
+				}
+				content {
+					html
+				}
+			}
+		}
+	}
+`;
