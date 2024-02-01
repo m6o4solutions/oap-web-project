@@ -276,3 +276,24 @@ export const qryAboutPage = gql`
 		}
 	}
 `;
+
+/* query to retrieve home page data */
+export const qryHomePage = gql`
+	query qryHomePage {
+		pages(where: { slug: "home" }) {
+			pageTitle
+			pageMetaDescription
+			heroActionBlock {
+				content {
+					content {
+						header {
+							title
+							subtitle
+						}
+					}
+					image
+				}
+			}
+		}
+	}
+`;
