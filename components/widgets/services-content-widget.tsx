@@ -5,17 +5,6 @@ import {
 	ServicesCardWidget,
 } from "@/components/index";
 
-type AllServicesProps = {
-	businessName: string;
-	businessLogo: { public_id: string };
-	businessDescription: {
-		html: string;
-	};
-	telephoneNumber: string;
-	emailAddress: string;
-	website: string;
-};
-
 type ServicesContentWidgetProps = {
 	pasHeaderContentImageListBlock: {
 		header: {
@@ -25,7 +14,16 @@ type ServicesContentWidgetProps = {
 			};
 		};
 	};
-	services: AllServicesProps[];
+	services: {
+		businessName: string;
+		businessLogo: { public_id: string };
+		businessDescription: {
+			html: string;
+		};
+		telephoneNumber: string;
+		emailAddress: string;
+		website: string;
+	}[];
 };
 
 export const ServicesContentWidget = ({

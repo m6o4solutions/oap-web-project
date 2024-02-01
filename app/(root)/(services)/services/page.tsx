@@ -24,17 +24,6 @@ type ServicesPageProps = {
 	};
 };
 
-type AllServicesProps = {
-	businessName: string;
-	businessLogo: { public_id: string };
-	businessDescription: {
-		html: string;
-	};
-	telephoneNumber: string;
-	emailAddress: string;
-	website: string;
-};
-
 export async function generateMetadata(): Promise<Metadata> {
 	const { pageTitle, pageMetaDescription, heroActionBlock }: ServicesPageProps =
 		await getServicesPage();
@@ -62,7 +51,7 @@ const ServicesPage = async () => {
 	const { heroActionBlock, pasHeaderContentImageListBlock }: ServicesPageProps =
 		await getServicesPage();
 
-	const services: AllServicesProps[] = await getAllServices();
+	const services = await getAllServices();
 
 	return (
 		<article className="mt-24 space-y-8">
