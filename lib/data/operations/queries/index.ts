@@ -189,6 +189,13 @@ export const qryPilotsPage = gql`
 					}
 				}
 			}
+			galleryHeaderGalleryBlock {
+				header {
+					title
+					subtitle
+				}
+				gallery
+			}
 		}
 	}
 `;

@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 import { Container } from "@/components/container";
 import {
-	Button,
+	CarouselGalleryBlock,
 	ContentDisplayBlock,
 	HeaderDisplayBlock,
 	PilotsDownloadsListWidget,
@@ -23,10 +21,18 @@ type PilotsContentWidgetProps = {
 			};
 		}[];
 	};
+	galleryHeaderGalleryBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+		gallery: [];
+	};
 };
 
 export const PilotsContentWidget = ({
 	pasHeaderContentImageListBlock,
+	galleryHeaderGalleryBlock,
 }: PilotsContentWidgetProps) => {
 	return (
 		<Container>
@@ -44,11 +50,19 @@ export const PilotsContentWidget = ({
 					/>
 
 					<div className="flex flex-col lg:flex-row">
-						{/* contact form start */}
-						<div className="lg:w-3/4"></div>
-						{/* contact form end */}
+						<div className="lg:w-3/4">
+							<div className="space-y-5">
+								<HeaderDisplayBlock
+									title={galleryHeaderGalleryBlock.header.title}
+									subtitle={galleryHeaderGalleryBlock.header.subtitle}
+								/>
 
-						{/* miscellaneous details start */}
+								<CarouselGalleryBlock
+									gallery={galleryHeaderGalleryBlock.gallery}
+								/>
+							</div>
+						</div>
+
 						<div className="mt-5 space-y-3 lg:mt-0 lg:w-1/4 lg:px-3">
 							{pasHeaderContentImageListBlock.list.map((item, index) => (
 								<PilotsDownloadsListWidget
@@ -59,7 +73,6 @@ export const PilotsContentWidget = ({
 								/>
 							))}
 						</div>
-						{/* miscellaneous details end */}
 					</div>
 				</div>
 			</div>

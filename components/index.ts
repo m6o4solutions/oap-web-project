@@ -1,4 +1,5 @@
 /* component blocks */
+import { CarouselGalleryBlock } from "@/components/blocks/carousel-gallery-block";
 import { ContactFormBlock } from "@/components/blocks/contact-form-block";
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
 import { HeaderDisplayBlock } from "@/components/blocks/header-display-block";
@@ -12,6 +13,13 @@ import { ContactFormNotification } from "@/components/email/contact-form-notific
 
 /* shadcn ui elements */
 import { Button } from "@/components/ui/button";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
 	Form,
@@ -68,6 +76,7 @@ import { ServicesContentWidget } from "@/components/widgets/services-content-wid
 import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
 export {
+	CarouselGalleryBlock,
 	ContactFormBlock,
 	ContentDisplayBlock,
 	HeaderDisplayBlock,
@@ -77,6 +86,11 @@ export {
 	NavigationHeaderBlock,
 	ContactFormNotification,
 	Button,
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
 	Checkbox,
 	Form,
 	FormControl,

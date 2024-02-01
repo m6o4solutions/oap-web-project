@@ -28,6 +28,13 @@ type PilotsPageProps = {
 			};
 		}[];
 	};
+	galleryHeaderGalleryBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+		gallery: [];
+	};
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -54,8 +61,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const PilotsPage = async () => {
-	const { heroActionBlock, pasHeaderContentImageListBlock }: PilotsPageProps =
-		await getPilotsPage();
+	const {
+		heroActionBlock,
+		pasHeaderContentImageListBlock,
+		galleryHeaderGalleryBlock,
+	}: PilotsPageProps = await getPilotsPage();
 
 	return (
 		<article className="mt-24 space-y-8">
@@ -66,6 +76,7 @@ const PilotsPage = async () => {
 			<section id="content">
 				<PilotsContentWidget
 					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+					galleryHeaderGalleryBlock={galleryHeaderGalleryBlock}
 				/>
 			</section>
 		</article>

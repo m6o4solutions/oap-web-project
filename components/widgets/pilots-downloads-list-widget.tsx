@@ -15,7 +15,7 @@ export const PilotsDownloadsListWidget = ({
 }: PilotsDownloadsListWidgetProps) => {
 	return (
 		<div className="mx-auto max-w-full rounded-lg border bg-secondary p-3 dark:bg-transparent">
-			<p className="mb-3 text-lg font-semibold tracking-wide">{title}</p>
+			<p className="mb-3 font-medium uppercase tracking-wide">{title}</p>
 
 			<Separator className="my-3" />
 
