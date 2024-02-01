@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 
-import { getPrivacyPolicyPage } from "@/lib/data/read";
+import { getPrivacyPolicyPage } from "@/lib/data/read/index";
 
 import {
 	PrivacyPolicyContentWidget,

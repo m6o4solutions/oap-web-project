@@ -302,8 +302,8 @@ export const ContactFormBlock = () => {
 					</p>
 
 					<p>
-						Please note that Orly Airpark operates on{" "}
-						<strong>Prior Permission Required</strong> basis.
+						Please note that Orly Airpark operates on Prior Permission Required
+						basis.
 					</p>
 				</div>
 			</Form>

@@ -18,7 +18,10 @@ export const ContactFormNotification = ({
 	return (
 		<div>
 			<p>Hello?</p>
-			<p>A new contact message has been received with the following details:</p>
+			<p>
+				A new client contact message has been received with the following
+				details:
+			</p>
 			<ul>
 				<li>
 					<strong>First Name:</strong> {firstName}
@@ -47,6 +50,7 @@ export const ContactFormNotification = ({
 			<p>
 				Thank you for your dedication to providing exceptional client support.
 			</p>
+			<p>Regards,</p>
 			<p>
 				<strong>MTA @ S3</strong>
 			</p>
