@@ -4,6 +4,7 @@ import {
 	ContentDisplayBlock,
 	HeaderDisplayBlock,
 	PilotsDownloadsListWidget,
+	PilotsFeesTableWidget,
 } from "@/components/index";
 
 type PilotsContentWidgetProps = {
@@ -28,11 +29,30 @@ type PilotsContentWidgetProps = {
 		};
 		gallery: [];
 	};
+	feesHeaderContentBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+	};
+	fees: {
+		title: string;
+		structure: {
+			list: {
+				header: {
+					title: string;
+					subtitle: string;
+				};
+			}[];
+		};
+	}[];
 };
 
 export const PilotsContentWidget = ({
 	pasHeaderContentImageListBlock,
 	galleryHeaderGalleryBlock,
+	feesHeaderContentBlock,
+	fees,
 }: PilotsContentWidgetProps) => {
 	return (
 		<Container>
@@ -50,17 +70,22 @@ export const PilotsContentWidget = ({
 					/>
 
 					<div className="flex flex-col lg:flex-row">
-						<div className="lg:w-3/4">
-							<div className="space-y-5">
-								<HeaderDisplayBlock
-									title={galleryHeaderGalleryBlock.header.title}
-									subtitle={galleryHeaderGalleryBlock.header.subtitle}
-								/>
+						<div className="space-y-5 lg:w-3/4">
+							<HeaderDisplayBlock
+								title={galleryHeaderGalleryBlock.header.title}
+								subtitle={galleryHeaderGalleryBlock.header.subtitle}
+							/>
 
-								<CarouselGalleryBlock
-									gallery={galleryHeaderGalleryBlock.gallery}
-								/>
-							</div>
+							<CarouselGalleryBlock
+								gallery={galleryHeaderGalleryBlock.gallery}
+							/>
+
+							<HeaderDisplayBlock
+								title={feesHeaderContentBlock.header.title}
+								subtitle={feesHeaderContentBlock.header.subtitle}
+							/>
+
+							<PilotsFeesTableWidget fees={fees} />
 						</div>
 
 						<div className="mt-5 space-y-3 lg:mt-0 lg:w-1/4 lg:px-3">

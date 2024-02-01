@@ -35,6 +35,23 @@ type PilotsPageProps = {
 		};
 		gallery: [];
 	};
+	feesHeaderContentBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+	};
+	fees: {
+		title: string;
+		structure: {
+			list: {
+				header: {
+					title: string;
+					subtitle: string;
+				};
+			}[];
+		};
+	}[];
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -65,6 +82,8 @@ const PilotsPage = async () => {
 		heroActionBlock,
 		pasHeaderContentImageListBlock,
 		galleryHeaderGalleryBlock,
+		feesHeaderContentBlock,
+		fees,
 	}: PilotsPageProps = await getPilotsPage();
 
 	return (
@@ -77,6 +96,8 @@ const PilotsPage = async () => {
 				<PilotsContentWidget
 					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
 					galleryHeaderGalleryBlock={galleryHeaderGalleryBlock}
+					feesHeaderContentBlock={feesHeaderContentBlock}
+					fees={fees}
 				/>
 			</section>
 		</article>

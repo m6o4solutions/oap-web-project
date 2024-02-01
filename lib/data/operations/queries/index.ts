@@ -196,6 +196,23 @@ export const qryPilotsPage = gql`
 				}
 				gallery
 			}
+			feesHeaderContentBlock {
+				header {
+					title
+					subtitle
+				}
+			}
+			fees {
+				title
+				structure {
+					list {
+						header {
+							title
+							subtitle
+						}
+					}
+				}
+			}
 		}
 	}
 `;
