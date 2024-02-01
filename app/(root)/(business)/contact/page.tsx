@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 
-import { getContactPage, getGlobal } from "@/lib/data/read";
+import { getContactPage, getGlobal } from "@/lib/data/read/index";
 
 type ContactPageProps = {
 	pageTitle: string;
@@ -24,16 +24,14 @@ type ContactPageProps = {
 
 type GlobalDataProps = {
 	siteContactDetails: {
-		list: [
-			{
-				header: {
-					title: string;
-				};
-				content: {
-					html: string;
-				};
-			},
-		];
+		list: {
+			header: {
+				title: string;
+			};
+			content: {
+				html: string;
+			};
+		}[];
 	};
 };
 

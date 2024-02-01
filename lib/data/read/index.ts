@@ -2,6 +2,7 @@ import {
 	qryAllServices,
 	qryContactPage,
 	qryGlobal,
+	qryPilotsPage,
 	qryPrivacyPolicyPage,
 	qryServicesPage,
 } from "@/lib/data/operations/queries";
@@ -91,5 +92,22 @@ export const getAllServices = async () => {
 		return data.services;
 	} catch (error) {
 		console.log("[GET_ALL_SERVICES]", error);
+	}
+};
+
+/* get pilots page data */
+export const getPilotsPage = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryPilotsPage }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.pages[0];
+	} catch (error) {
+		console.log("[GET_PILOTS_PAGE]", error);
 	}
 };

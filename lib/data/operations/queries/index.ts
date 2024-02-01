@@ -148,3 +148,71 @@ export const qryAllServices = gql`
 		}
 	}
 `;
+
+/* query to retrieve pilots page data */
+export const qryPilotsPage = gql`
+	query qryPilotsPage {
+		pages(where: { slug: "pilots" }) {
+			pageTitle
+			pageMetaDescription
+			heroActionBlock {
+				content {
+					content {
+						header {
+							title
+						}
+					}
+					image
+				}
+			}
+			pasHeaderContentImageListBlock {
+				header {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+				list {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
+			galleryHeaderGalleryBlock {
+				header {
+					title
+					subtitle
+				}
+				gallery
+			}
+			feesHeaderContentBlock {
+				header {
+					title
+					subtitle
+				}
+			}
+			fees {
+				title
+				structure {
+					list {
+						header {
+							title
+							subtitle
+						}
+					}
+				}
+			}
+		}
+	}
+`;
