@@ -64,10 +64,10 @@ import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
 import { ContactContentWidget } from "@/components/widgets/contact-content-widget";
 import { ContactDetailsWidget } from "@/components/widgets/contact-details-widget";
 import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
+import { DownloadsListWidget } from "@/components/widgets/downloads-list-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
-import { PilotsDownloadsListWidget } from "@/components/widgets/pilots-downloads-list-widget";
 import { PilotsFeesTableWidget } from "@/components/widgets/pilots-fees-table-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
@@ -125,10 +125,10 @@ export {
 	ContactContentWidget,
 	ContactDetailsWidget,
 	ContactHeroWidget,
+	DownloadsListWidget,
 	HomeContentWidget,
 	HomeHeroWidget,
 	PilotsContentWidget,
-	PilotsDownloadsListWidget,
 	PilotsFeesTableWidget,
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
