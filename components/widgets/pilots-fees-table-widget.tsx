@@ -24,7 +24,7 @@ type PilotsFeesTableWidgetProps = {
 
 export const PilotsFeesTableWidget = ({ fees }: PilotsFeesTableWidgetProps) => {
 	return (
-		<div>
+		<>
 			{fees.map((fee, index) => (
 				<Table key={index} className="my-3">
 					<TableCaption className="font-medium uppercase">
@@ -42,14 +42,16 @@ export const PilotsFeesTableWidget = ({ fees }: PilotsFeesTableWidgetProps) => {
 					</TableHeader>
 					{fee.structure.list.map((list, index) => (
 						<TableBody key={index}>
-							<TableCell>{list.header.title}</TableCell>
-							<TableCell className="text-right">
-								{list.header.subtitle}
-							</TableCell>
+							<TableRow>
+								<TableCell>{list.header.title}</TableCell>
+								<TableCell className="text-right">
+									{list.header.subtitle}
+								</TableCell>
+							</TableRow>
 						</TableBody>
 					))}
 				</Table>
 			))}
-		</div>
+		</>
 	);
 };

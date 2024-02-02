@@ -14,11 +14,29 @@ type HomePageProps = {
 			image: { public_id: string };
 		};
 	};
+	pasHeaderContentImageListBlock: {
+		header: {
+			content: {
+				header: { title: string; subtitle: string };
+				content: { html: string };
+			};
+		};
+		list: {
+			content: {
+				header: { title: string };
+				content: { html: string };
+			};
+		}[];
+	};
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-	const { pageTitle, pageMetaDescription, heroActionBlock }: HomePageProps =
-		await getHomePage();
+	const {
+		pageTitle,
+		pageMetaDescription,
+		heroActionBlock,
+		pasHeaderContentImageListBlock,
+	}: HomePageProps = await getHomePage();
 
 	return {
 		title: pageTitle,
@@ -40,7 +58,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const HomePage = async () => {
-	const { heroActionBlock }: HomePageProps = await getHomePage();
+	const { heroActionBlock, pasHeaderContentImageListBlock }: HomePageProps =
+		await getHomePage();
 	const notam = await getNotam();
 
 	return (
@@ -50,7 +69,9 @@ const HomePage = async () => {
 			</section>
 
 			<section id="content">
-				<HomeContentWidget />
+				<HomeContentWidget
+					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+				/>
 			</section>
 		</article>
 	);

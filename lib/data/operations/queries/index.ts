@@ -294,6 +294,29 @@ export const qryHomePage = gql`
 					image
 				}
 			}
+			pasHeaderContentImageListBlock {
+				header {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+				}
+				list {
+					content {
+						header {
+							title
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
 		}
 	}
 `;

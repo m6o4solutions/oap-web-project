@@ -2,17 +2,17 @@ import Link from "next/link";
 
 import { Button, ContentDisplayBlock, Separator } from "@/components/index";
 
-type DownloadsListWidgetProps = {
+type DownloadsListBlockProps = {
 	title: string;
 	subtitle: string;
 	content: string;
 };
 
-export const DownloadsListWidget = ({
+export const DownloadsListBlock = ({
 	title,
 	subtitle,
 	content,
-}: DownloadsListWidgetProps) => {
+}: DownloadsListBlockProps) => {
 	return (
 		<div className="mx-auto max-w-full rounded-lg border bg-secondary p-3 dark:bg-transparent">
 			<p className="mb-3 font-medium uppercase tracking-wide">{title}</p>

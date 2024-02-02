@@ -2,6 +2,7 @@
 import { CarouselGalleryBlock } from "@/components/blocks/carousel-gallery-block";
 import { ContactFormBlock } from "@/components/blocks/contact-form-block";
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
+import { DownloadsListBlock } from "@/components/blocks/downloads-list-block";
 import { HeaderDisplayBlock } from "@/components/blocks/header-display-block";
 import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
 import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
@@ -65,7 +66,6 @@ import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
 import { ContactContentWidget } from "@/components/widgets/contact-content-widget";
 import { ContactDetailsWidget } from "@/components/widgets/contact-details-widget";
 import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
-import { DownloadsListWidget } from "@/components/widgets/downloads-list-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
@@ -81,6 +81,7 @@ export {
 	CarouselGalleryBlock,
 	ContactFormBlock,
 	ContentDisplayBlock,
+	DownloadsListBlock,
 	HeaderDisplayBlock,
 	HeroDisplayBlock,
 	ImageDisplayBlock,
@@ -127,7 +128,6 @@ export {
 	ContactContentWidget,
 	ContactDetailsWidget,
 	ContactHeroWidget,
-	DownloadsListWidget,
 	HomeContentWidget,
 	HomeHeroWidget,
 	PilotsContentWidget,
