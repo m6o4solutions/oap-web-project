@@ -46,7 +46,7 @@ export const AboutContentWidget = ({
 }: AboutContentWidgetProps) => {
 	return (
 		<Container>
-			<div className="pb-8 pt-5">
+			<div className="py-8">
 				<div className="space-y-8">
 					<HeaderDisplayBlock
 						title={pasHeaderContentImageListBlock.header.content.header.title}

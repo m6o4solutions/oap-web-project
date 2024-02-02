@@ -1,10 +1,9 @@
 import { Container } from "@/components/container";
 import {
-	ContentDisplayBlock,
+	AccordionBlock,
 	HeaderDisplayBlock,
 	HomePASWidget,
-	ImageDisplayBlock,
-	Separator,
+	HomeWebcamWeatherWidget,
 } from "@/components/index";
 
 type HomeContentWidgetProps = {
@@ -23,29 +22,79 @@ type HomeContentWidgetProps = {
 			};
 		}[];
 	};
+	benefitsHeaderContentBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+		content: {
+			html: string;
+		};
+	};
+	faqs: {
+		faqs: {
+			list: {
+				header: {
+					title: string;
+				};
+				content: {
+					html: string;
+				};
+			}[];
+		};
+	};
 };
 
 export const HomeContentWidget = ({
 	pasHeaderContentImageListBlock,
+	benefitsHeaderContentBlock,
+	faqs,
 }: HomeContentWidgetProps) => {
 	return (
-		<Container>
-			<div className="pb-8 pt-5">
-				<div className="space-y-8">
-					<div className="w-full rounded-lg border bg-secondary p-5 dark:bg-transparent">
-						<HeaderDisplayBlock
-							title={pasHeaderContentImageListBlock.header.content.header.title}
-							subtitle={
-								pasHeaderContentImageListBlock.header.content.header.subtitle
-							}
-						/>
+		<>
+			<Container>
+				<div className="py-8">
+					<div className="space-y-8">
+						<div className="w-full rounded-lg border bg-secondary p-5 dark:bg-transparent">
+							<HeaderDisplayBlock
+								title={
+									pasHeaderContentImageListBlock.header.content.header.title
+								}
+								subtitle={
+									pasHeaderContentImageListBlock.header.content.header.subtitle
+								}
+							/>
 
-						<HomePASWidget
-							pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
-						/>
+							<HomePASWidget
+								pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+							/>
+						</div>
 					</div>
 				</div>
-			</div>
-		</Container>
+			</Container>
+
+			<HomeWebcamWeatherWidget
+				benefitsHeaderContentBlock={benefitsHeaderContentBlock}
+			/>
+
+			<Container>
+				<div className="py-8">
+					<div className="space-y-8">
+						<HeaderDisplayBlock
+							title="Frequently Asked Questions"
+							subtitle="Uncover answers to common queries about Orly Airpark."
+						/>
+
+						{faqs.faqs.list.map((item, index) => (
+							<AccordionBlock
+								key={index}
+								content={item.content.html}
+								title={item.header.title}
+							/>
+						))}
+					</div>
+				</div>
+			</Container>
+		</>
 	);
 };
