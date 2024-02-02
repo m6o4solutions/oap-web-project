@@ -1,4 +1,4 @@
-import { ImageDisplayBlock } from "@/components/index";
+import { ImageDisplayBlock, NotamDisplayBlock } from "@/components/index";
 
 type HomeHeroWidgetProps = {
 	heroActionBlock: {
@@ -7,9 +7,13 @@ type HomeHeroWidgetProps = {
 			image: { public_id: string };
 		};
 	};
+	notam: { notamMessage: string }[];
 };
 
-export const HomeHeroWidget = ({ heroActionBlock }: HomeHeroWidgetProps) => {
+export const HomeHeroWidget = ({
+	heroActionBlock,
+	notam,
+}: HomeHeroWidgetProps) => {
 	return (
 		<div className="mx-1">
 			<div className="relative">
@@ -33,7 +37,25 @@ export const HomeHeroWidget = ({ heroActionBlock }: HomeHeroWidgetProps) => {
 								</p>
 							</div>
 
-							<div className="px-3 md:w-1/2"></div>
+							<div className="px-3 md:w-1/2">
+								<div className="mx-auto mt-5 max-w-full rounded-lg bg-white/70 p-3 lg:mt-0">
+									<h2 className="mb-2 text-lg font-semibold uppercase">
+										Aviation Advisory
+									</h2>
+									<div className="mb-2 rounded-md bg-red-500/50 p-2">
+										{notam.length === 0 ? (
+											<NotamDisplayBlock notice="No NOTAM on record." />
+										) : (
+											notam.map((notice, index) => (
+												<NotamDisplayBlock
+													key={index}
+													notice={notice.notamMessage}
+												/>
+											))
+										)}
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

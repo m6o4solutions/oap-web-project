@@ -4,6 +4,7 @@ import {
 	qryContactPage,
 	qryGlobal,
 	qryHomePage,
+	qryNotam,
 	qryPilotsPage,
 	qryPrivacyPolicyPage,
 	qryServicesPage,
@@ -11,6 +12,27 @@ import {
 
 /* graphql endpoint */
 const endpoint = process.env.NEXT_PUBLIC_HIGH_PERFORMANCE_CONTENT_API!;
+
+/* openweather variables */
+const key = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY!;
+const latitude = process.env.NEXT_PUBLIC_LATITUDE!;
+const longitude = process.env.NEXT_PUBLIC_LONGITUDE!;
+const language = process.env.NEXT_PUBLIC_LANGUAGE!;
+const units = process.env.NEXT_PUBLIC_UNITS!;
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=${units}&lang=${language}`;
+
+/* get weather data */
+export const getWeather = async () => {
+	try {
+		const result = await fetch(url, { next: { revalidate: 21600 } });
+
+		const data = await result.json();
+
+		return data;
+	} catch (error) {
+		console.log("[GET_WEATHER]", error);
+	}
+};
 
 /* get global data */
 export const getGlobal = async () => {
@@ -145,5 +167,22 @@ export const getHomePage = async () => {
 		return data.pages[0];
 	} catch (error) {
 		console.log("[GET_HOME_PAGE]", error);
+	}
+};
+
+/* get NOTAM data */
+export const getNotam = async () => {
+	try {
+		const result = await fetch(endpoint, {
+			method: "POST",
+			body: JSON.stringify({ query: qryNotam }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		const { data } = await result.json();
+
+		return data.notams;
+	} catch (error) {
+		console.log("[GET_NOTAM]", error);
 	}
 };
