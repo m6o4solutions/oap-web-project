@@ -29,6 +29,15 @@ type HomePageProps = {
 			};
 		}[];
 	};
+	benefitsHeaderContentBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+		content: {
+			html: string;
+		};
+	};
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -55,8 +64,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const HomePage = async () => {
-	const { heroActionBlock, pasHeaderContentImageListBlock }: HomePageProps =
-		await getHomePage();
+	const {
+		heroActionBlock,
+		pasHeaderContentImageListBlock,
+		benefitsHeaderContentBlock,
+	}: HomePageProps = await getHomePage();
+
 	const notam = await getNotam();
 
 	return (
@@ -68,6 +81,7 @@ const HomePage = async () => {
 			<section id="content">
 				<HomeContentWidget
 					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+					benefitsHeaderContentBlock={benefitsHeaderContentBlock}
 				/>
 			</section>
 		</article>

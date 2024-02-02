@@ -21,10 +21,20 @@ type HomeContentWidgetProps = {
 			};
 		}[];
 	};
+	benefitsHeaderContentBlock: {
+		header: {
+			title: string;
+			subtitle: string;
+		};
+		content: {
+			html: string;
+		};
+	};
 };
 
 export const HomeContentWidget = ({
 	pasHeaderContentImageListBlock,
+	benefitsHeaderContentBlock,
 }: HomeContentWidgetProps) => {
 	return (
 		<>
@@ -49,7 +59,9 @@ export const HomeContentWidget = ({
 				</div>
 			</Container>
 
-			<HomeWebcamWeatherWidget />
+			<HomeWebcamWeatherWidget
+				benefitsHeaderContentBlock={benefitsHeaderContentBlock}
+			/>
 
 			<Container>
 				<div className="py-8">
