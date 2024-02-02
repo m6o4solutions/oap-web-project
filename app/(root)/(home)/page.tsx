@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 
-import { getHomePage } from "@/lib/data/read/index";
+import { getHomePage, getNotam } from "@/lib/data/read/index";
 
 import { HomeContentWidget, HomeHeroWidget } from "@/components/index";
 
@@ -14,11 +14,30 @@ type HomePageProps = {
 			image: { public_id: string };
 		};
 	};
+	pasHeaderContentImageListBlock: {
+		header: {
+			content: {
+				header: { title: string; subtitle: string };
+				content: { html: string };
+			};
+			image: { public_id: string };
+		};
+		list: {
+			content: {
+				header: { title: string };
+				content: { html: string };
+			};
+		}[];
+	};
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-	const { pageTitle, pageMetaDescription, heroActionBlock }: HomePageProps =
-		await getHomePage();
+	const {
+		pageTitle,
+		pageMetaDescription,
+		heroActionBlock,
+		pasHeaderContentImageListBlock,
+	}: HomePageProps = await getHomePage();
 
 	return {
 		title: pageTitle,
@@ -40,16 +59,20 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const HomePage = async () => {
-	const { heroActionBlock }: HomePageProps = await getHomePage();
+	const { heroActionBlock, pasHeaderContentImageListBlock }: HomePageProps =
+		await getHomePage();
+	const notam = await getNotam();
 
 	return (
 		<article className="mt-24 space-y-8">
 			<section id="hero">
-				<HomeHeroWidget heroActionBlock={heroActionBlock} />
+				<HomeHeroWidget heroActionBlock={heroActionBlock} notam={notam} />
 			</section>
 
 			<section id="content">
-				<HomeContentWidget />
+				<HomeContentWidget
+					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
+				/>
 			</section>
 		</article>
 	);

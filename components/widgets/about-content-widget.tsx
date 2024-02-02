@@ -2,7 +2,7 @@ import { Container } from "@/components/container";
 import {
 	CarouselGalleryBlock,
 	ContentDisplayBlock,
-	DownloadsListWidget,
+	DownloadsListBlock,
 	HeaderDisplayBlock,
 } from "@/components/index";
 
@@ -82,7 +82,7 @@ export const AboutContentWidget = ({
 
 						<div className="mt-5 space-y-3 lg:mt-0 lg:w-1/4 lg:px-3">
 							{pasHeaderContentImageListBlock.list.map((item, index) => (
-								<DownloadsListWidget
+								<DownloadsListBlock
 									key={index}
 									title={item.content.header.title}
 									subtitle={item.content.header.subtitle}

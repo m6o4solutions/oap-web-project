@@ -9,7 +9,7 @@ export const qryGlobal = gql`
 			siteLogo
 			siteTagline
 			siteContactDetails {
-				list {
+				list(first: 21) {
 					header {
 						title
 					}
@@ -294,6 +294,40 @@ export const qryHomePage = gql`
 					image
 				}
 			}
+			pasHeaderContentImageListBlock {
+				header {
+					content {
+						header {
+							title
+							subtitle
+						}
+						content {
+							html
+						}
+					}
+					image
+				}
+				list {
+					content {
+						header {
+							title
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
+		}
+	}
+`;
+
+/* query to retrieve NOTAM data */
+export const qryNotam = gql`
+	query qryNotam {
+		notams(first: 1, orderBy: effectiveNotamDateTime_DESC) {
+			effectiveNotamDateTime
+			notamMessage
 		}
 	}
 `;

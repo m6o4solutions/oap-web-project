@@ -2,9 +2,9 @@ import { Container } from "@/components/container";
 import {
 	CarouselGalleryBlock,
 	ContentDisplayBlock,
-	DownloadsListWidget,
+	DownloadsListBlock,
+	FeesTableBlock,
 	HeaderDisplayBlock,
-	PilotsFeesTableWidget,
 } from "@/components/index";
 
 type PilotsContentWidgetProps = {
@@ -85,12 +85,12 @@ export const PilotsContentWidget = ({
 								subtitle={feesHeaderContentBlock.header.subtitle}
 							/>
 
-							<PilotsFeesTableWidget fees={fees} />
+							<FeesTableBlock fees={fees} />
 						</div>
 
 						<div className="mt-5 space-y-3 lg:mt-0 lg:w-1/4 lg:px-3">
 							{pasHeaderContentImageListBlock.list.map((item, index) => (
-								<DownloadsListWidget
+								<DownloadsListBlock
 									key={index}
 									title={item.content.header.title}
 									subtitle={item.content.header.subtitle}

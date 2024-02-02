@@ -2,11 +2,14 @@
 import { CarouselGalleryBlock } from "@/components/blocks/carousel-gallery-block";
 import { ContactFormBlock } from "@/components/blocks/contact-form-block";
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
+import { DownloadsListBlock } from "@/components/blocks/downloads-list-block";
+import { FeesTableBlock } from "@/components/blocks/fees-table-block";
 import { HeaderDisplayBlock } from "@/components/blocks/header-display-block";
 import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
 import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
 import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-block";
 import { NavigationHeaderBlock } from "@/components/blocks/navigation-header-block";
+import { NotamDisplayBlock } from "@/components/blocks/notam-display-block";
 
 /* notification components */
 import { ContactFormNotification } from "@/components/email/contact-form-notification";
@@ -64,11 +67,10 @@ import { AboutHeroWidget } from "@/components/widgets/about-hero-widget";
 import { ContactContentWidget } from "@/components/widgets/contact-content-widget";
 import { ContactDetailsWidget } from "@/components/widgets/contact-details-widget";
 import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
-import { DownloadsListWidget } from "@/components/widgets/downloads-list-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
+import { HomePASWidget } from "@/components/widgets/home-pas-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
-import { PilotsFeesTableWidget } from "@/components/widgets/pilots-fees-table-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
 import { PrivacyPolicyHeroWidget } from "@/components/widgets/privacy-policy-hero-widget";
@@ -80,11 +82,14 @@ export {
 	CarouselGalleryBlock,
 	ContactFormBlock,
 	ContentDisplayBlock,
+	DownloadsListBlock,
+	FeesTableBlock,
 	HeaderDisplayBlock,
 	HeroDisplayBlock,
 	ImageDisplayBlock,
 	NavigationFooterBlock,
 	NavigationHeaderBlock,
+	NotamDisplayBlock,
 	ContactFormNotification,
 	Button,
 	Carousel,
@@ -125,11 +130,10 @@ export {
 	ContactContentWidget,
 	ContactDetailsWidget,
 	ContactHeroWidget,
-	DownloadsListWidget,
 	HomeContentWidget,
 	HomeHeroWidget,
+	HomePASWidget,
 	PilotsContentWidget,
-	PilotsFeesTableWidget,
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
 	PrivacyPolicyHeroWidget,
