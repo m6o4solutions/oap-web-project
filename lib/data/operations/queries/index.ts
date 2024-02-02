@@ -327,6 +327,18 @@ export const qryHomePage = gql`
 					html
 				}
 			}
+			faqs {
+				faqs {
+					list {
+						header {
+							title
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
 		}
 	}
 `;

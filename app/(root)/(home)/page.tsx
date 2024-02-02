@@ -38,6 +38,18 @@ type HomePageProps = {
 			html: string;
 		};
 	};
+	faqs: {
+		faqs: {
+			list: {
+				header: {
+					title: string;
+				};
+				content: {
+					html: string;
+				};
+			}[];
+		};
+	};
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -68,6 +80,7 @@ const HomePage = async () => {
 		heroActionBlock,
 		pasHeaderContentImageListBlock,
 		benefitsHeaderContentBlock,
+		faqs,
 	}: HomePageProps = await getHomePage();
 
 	const notam = await getNotam();
@@ -82,6 +95,7 @@ const HomePage = async () => {
 				<HomeContentWidget
 					pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
 					benefitsHeaderContentBlock={benefitsHeaderContentBlock}
+					faqs={faqs}
 				/>
 			</section>
 		</article>

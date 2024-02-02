@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import {
+	AccordionBlock,
 	HeaderDisplayBlock,
 	HomePASWidget,
 	HomeWebcamWeatherWidget,
@@ -30,11 +31,24 @@ type HomeContentWidgetProps = {
 			html: string;
 		};
 	};
+	faqs: {
+		faqs: {
+			list: {
+				header: {
+					title: string;
+				};
+				content: {
+					html: string;
+				};
+			}[];
+		};
+	};
 };
 
 export const HomeContentWidget = ({
 	pasHeaderContentImageListBlock,
 	benefitsHeaderContentBlock,
+	faqs,
 }: HomeContentWidgetProps) => {
 	return (
 		<>
@@ -65,7 +79,20 @@ export const HomeContentWidget = ({
 
 			<Container>
 				<div className="py-8">
-					<div className="space-y-8">Basement Section</div>
+					<div className="space-y-8">
+						<HeaderDisplayBlock
+							title="Frequently Asked Questions"
+							subtitle="Uncover answers to common queries about Orly Airpark."
+						/>
+
+						{faqs.faqs.list.map((item, index) => (
+							<AccordionBlock
+								key={index}
+								content={item.content.html}
+								title={item.header.title}
+							/>
+						))}
+					</div>
 				</div>
 			</Container>
 		</>
