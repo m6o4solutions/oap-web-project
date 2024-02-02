@@ -3,6 +3,7 @@ import { CarouselGalleryBlock } from "@/components/blocks/carousel-gallery-block
 import { ContactFormBlock } from "@/components/blocks/contact-form-block";
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
 import { DownloadsListBlock } from "@/components/blocks/downloads-list-block";
+import { FeesTableBlock } from "@/components/blocks/fees-table-block";
 import { HeaderDisplayBlock } from "@/components/blocks/header-display-block";
 import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
 import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
@@ -69,7 +70,6 @@ import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
-import { PilotsFeesTableWidget } from "@/components/widgets/pilots-fees-table-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
 import { PrivacyPolicyHeroWidget } from "@/components/widgets/privacy-policy-hero-widget";
@@ -82,6 +82,7 @@ export {
 	ContactFormBlock,
 	ContentDisplayBlock,
 	DownloadsListBlock,
+	FeesTableBlock,
 	HeaderDisplayBlock,
 	HeroDisplayBlock,
 	ImageDisplayBlock,
@@ -131,7 +132,6 @@ export {
 	HomeContentWidget,
 	HomeHeroWidget,
 	PilotsContentWidget,
-	PilotsFeesTableWidget,
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
 	PrivacyPolicyHeroWidget,

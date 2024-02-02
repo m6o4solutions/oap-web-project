@@ -3,8 +3,8 @@ import {
 	CarouselGalleryBlock,
 	ContentDisplayBlock,
 	DownloadsListBlock,
+	FeesTableBlock,
 	HeaderDisplayBlock,
-	PilotsFeesTableWidget,
 } from "@/components/index";
 
 type PilotsContentWidgetProps = {
@@ -85,7 +85,7 @@ export const PilotsContentWidget = ({
 								subtitle={feesHeaderContentBlock.header.subtitle}
 							/>
 
-							<PilotsFeesTableWidget fees={fees} />
+							<FeesTableBlock fees={fees} />
 						</div>
 
 						<div className="mt-5 space-y-3 lg:mt-0 lg:w-1/4 lg:px-3">

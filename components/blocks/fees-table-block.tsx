@@ -8,7 +8,7 @@ import {
 	TableRow,
 } from "@/components/index";
 
-type PilotsFeesTableWidgetProps = {
+type FeesTableBlockProps = {
 	fees: {
 		title: string;
 		structure: {
@@ -22,7 +22,7 @@ type PilotsFeesTableWidgetProps = {
 	}[];
 };
 
-export const PilotsFeesTableWidget = ({ fees }: PilotsFeesTableWidgetProps) => {
+export const FeesTableBlock = ({ fees }: FeesTableBlockProps) => {
 	return (
 		<>
 			{fees.map((fee, index) => (
