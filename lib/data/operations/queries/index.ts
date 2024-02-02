@@ -318,6 +318,27 @@ export const qryHomePage = gql`
 					}
 				}
 			}
+			benefitsHeaderContentBlock {
+				header {
+					title
+					subtitle
+				}
+				content {
+					html
+				}
+			}
+			faqs {
+				faqs {
+					list {
+						header {
+							title
+						}
+						content {
+							html
+						}
+					}
+				}
+			}
 		}
 	}
 `;

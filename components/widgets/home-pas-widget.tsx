@@ -26,9 +26,9 @@ export const HomePASWidget = ({
 	pasHeaderContentImageListBlock,
 }: HomePASWidgetProps) => {
 	return (
-		<>
+		<div className="space-y-8">
 			<div className="flex flex-col lg:flex-row">
-				<div className="my-5 lg:mb-0 lg:w-1/2 lg:pr-5">
+				<div className="my-5 lg:w-1/2 lg:pr-5">
 					<div className="relative h-64 w-full rounded-lg">
 						<ImageDisplayBlock
 							imageSrc={pasHeaderContentImageListBlock.header.image.public_id}
@@ -38,6 +38,7 @@ export const HomePASWidget = ({
 						/>
 					</div>
 				</div>
+
 				<div className="my-5 lg:w-1/2">
 					<ContentDisplayBlock
 						content={pasHeaderContentImageListBlock.header.content.content.html}
@@ -45,7 +46,7 @@ export const HomePASWidget = ({
 				</div>
 			</div>
 
-			<div className="grid grid-cols-1 gap-5 pt-8 lg:grid-cols-3">
+			<div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
 				{pasHeaderContentImageListBlock.list.map((item, index) => (
 					<div
 						key={index}
@@ -64,6 +65,6 @@ export const HomePASWidget = ({
 				))}
 				<div />
 			</div>
-		</>
+		</div>
 	);
 };

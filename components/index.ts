@@ -1,4 +1,5 @@
 /* component blocks */
+import { AccordionBlock } from "@/components/blocks/accordion-block";
 import { CarouselGalleryBlock } from "@/components/blocks/carousel-gallery-block";
 import { ContactFormBlock } from "@/components/blocks/contact-form-block";
 import { ContentDisplayBlock } from "@/components/blocks/content-display-block";
@@ -15,6 +16,12 @@ import { NotamDisplayBlock } from "@/components/blocks/notam-display-block";
 import { ContactFormNotification } from "@/components/email/contact-form-notification";
 
 /* shadcn ui elements */
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
 	Carousel,
@@ -70,6 +77,7 @@ import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { HomePASWidget } from "@/components/widgets/home-pas-widget";
+import { HomeWebcamWeatherWidget } from "@/components/widgets/home-webcam-weather-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
@@ -79,6 +87,7 @@ import { ServicesContentWidget } from "@/components/widgets/services-content-wid
 import { ServicesHeroWidget } from "@/components/widgets/services-hero-widget";
 
 export {
+	AccordionBlock,
 	CarouselGalleryBlock,
 	ContactFormBlock,
 	ContentDisplayBlock,
@@ -91,6 +100,10 @@ export {
 	NavigationHeaderBlock,
 	NotamDisplayBlock,
 	ContactFormNotification,
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
 	Button,
 	Carousel,
 	CarouselContent,
@@ -133,6 +146,7 @@ export {
 	HomeContentWidget,
 	HomeHeroWidget,
 	HomePASWidget,
+	HomeWebcamWeatherWidget,
 	PilotsContentWidget,
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
