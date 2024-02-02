@@ -38,11 +38,11 @@ export const HomeHeroWidget = ({
 							</div>
 
 							<div className="px-3 md:w-1/2">
-								<div className="mx-auto mt-5 max-w-full rounded-lg bg-white/70 px-5 py-3 lg:mt-0">
+								<div className="mx-auto mt-5 max-w-full rounded-lg bg-white/70 p-3 lg:mt-0">
 									<h2 className="mb-2 text-lg font-semibold uppercase">
 										Aviation Advisory
 									</h2>
-									<div className="mb-2 rounded-md bg-red-500/50 px-2 py-3">
+									<div className="mb-2 rounded-md bg-red-500/50 p-2">
 										{notam.length === 0 ? (
 											<NotamDisplayBlock notice="No NOTAM on record." />
 										) : (
