@@ -24,7 +24,7 @@ type PilotsFeesTableWidgetProps = {
 
 export const PilotsFeesTableWidget = ({ fees }: PilotsFeesTableWidgetProps) => {
 	return (
-		<>
+		<div>
 			{fees.map((fee, index) => (
 				<Table key={index} className="my-3">
 					<TableCaption className="font-medium uppercase">
@@ -50,6 +50,6 @@ export const PilotsFeesTableWidget = ({ fees }: PilotsFeesTableWidgetProps) => {
 					))}
 				</Table>
 			))}
-		</>
+		</div>
 	);
 };

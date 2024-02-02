@@ -7,6 +7,7 @@ import { HeroDisplayBlock } from "@/components/blocks/hero-display-block";
 import { ImageDisplayBlock } from "@/components/blocks/image-display-block";
 import { NavigationFooterBlock } from "@/components/blocks/navigation-footer-block";
 import { NavigationHeaderBlock } from "@/components/blocks/navigation-header-block";
+import { NotamDisplayBlock } from "@/components/blocks/notam-display-block";
 
 /* notification components */
 import { ContactFormNotification } from "@/components/email/contact-form-notification";
@@ -85,6 +86,7 @@ export {
 	ImageDisplayBlock,
 	NavigationFooterBlock,
 	NavigationHeaderBlock,
+	NotamDisplayBlock,
 	ContactFormNotification,
 	Button,
 	Carousel,
