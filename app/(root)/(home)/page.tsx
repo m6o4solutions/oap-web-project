@@ -20,6 +20,7 @@ type HomePageProps = {
 				header: { title: string; subtitle: string };
 				content: { html: string };
 			};
+			image: { public_id: string };
 		};
 		list: {
 			content: {

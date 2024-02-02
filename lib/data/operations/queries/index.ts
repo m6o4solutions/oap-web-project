@@ -305,6 +305,7 @@ export const qryHomePage = gql`
 							html
 						}
 					}
+					image
 				}
 				list {
 					content {
