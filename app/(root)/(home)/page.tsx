@@ -32,12 +32,8 @@ type HomePageProps = {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-	const {
-		pageTitle,
-		pageMetaDescription,
-		heroActionBlock,
-		pasHeaderContentImageListBlock,
-	}: HomePageProps = await getHomePage();
+	const { pageTitle, pageMetaDescription, heroActionBlock }: HomePageProps =
+		await getHomePage();
 
 	return {
 		title: pageTitle,

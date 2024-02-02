@@ -70,6 +70,7 @@ import { ContactHeroWidget } from "@/components/widgets/contact-hero-widget";
 import { HomeContentWidget } from "@/components/widgets/home-content-widget";
 import { HomeHeroWidget } from "@/components/widgets/home-hero-widget";
 import { HomePASWidget } from "@/components/widgets/home-pas-widget";
+import { HomeWebcamWeatherWidget } from "@/components/widgets/home-webcam-weather-widget";
 import { PilotsContentWidget } from "@/components/widgets/pilots-content-widget";
 import { PilotsHeroWidget } from "@/components/widgets/pilots-hero-widget";
 import { PrivacyPolicyContentWidget } from "@/components/widgets/privacy-policy-content-widget";
@@ -133,6 +134,7 @@ export {
 	HomeContentWidget,
 	HomeHeroWidget,
 	HomePASWidget,
+	HomeWebcamWeatherWidget,
 	PilotsContentWidget,
 	PilotsHeroWidget,
 	PrivacyPolicyContentWidget,
