@@ -55,7 +55,7 @@ export const HomeContentWidget = ({
 			<Container>
 				<div className="py-8">
 					<div className="space-y-8">
-						{/*
+						{/* commented out because the client did not feel this was necessary.
 						<div className="w-full rounded-lg border bg-secondary p-5 dark:bg-transparent">
 							<HeaderDisplayBlock
 								title={
@@ -82,7 +82,7 @@ export const HomeContentWidget = ({
 			<Container>
 				<div className="py-8">
 					<div className="space-y-8">
-						{/*
+						{/* commented out because the client did not feel this was necessary.
 						<HeaderDisplayBlock
 							title="Frequently Asked Questions"
 							subtitle="Uncover answers to common queries about Orly Airpark."
