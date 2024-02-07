@@ -55,6 +55,7 @@ export const HomeContentWidget = ({
 			<Container>
 				<div className="py-8">
 					<div className="space-y-8">
+						{/*
 						<div className="w-full rounded-lg border bg-secondary p-5 dark:bg-transparent">
 							<HeaderDisplayBlock
 								title={
@@ -69,6 +70,7 @@ export const HomeContentWidget = ({
 								pasHeaderContentImageListBlock={pasHeaderContentImageListBlock}
 							/>
 						</div>
+						*/}
 					</div>
 				</div>
 			</Container>
@@ -80,6 +82,7 @@ export const HomeContentWidget = ({
 			<Container>
 				<div className="py-8">
 					<div className="space-y-8">
+						{/*
 						<HeaderDisplayBlock
 							title="Frequently Asked Questions"
 							subtitle="Uncover answers to common queries about Orly Airpark."
@@ -92,6 +95,7 @@ export const HomeContentWidget = ({
 								title={item.header.title}
 							/>
 						))}
+					*/}
 					</div>
 				</div>
 			</Container>
