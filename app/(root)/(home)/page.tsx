@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 
-import { getHomePage, getNotam } from "@/lib/data/read/index";
+import { getGlobal, getHomePage, getNotam } from "@/lib/data/read/index";
 
 import { HomeContentWidget, HomeHeroWidget } from "@/components/index";
 
@@ -52,6 +52,19 @@ type HomePageProps = {
 	};
 };
 
+type GlobalDataProps = {
+	siteContactDetails: {
+		list: {
+			header: {
+				title: string;
+			};
+			content: {
+				html: string;
+			};
+		}[];
+	};
+};
+
 export async function generateMetadata(): Promise<Metadata> {
 	const { pageTitle, pageMetaDescription, heroActionBlock }: HomePageProps =
 		await getHomePage();
@@ -85,10 +98,16 @@ const HomePage = async () => {
 
 	const notam = await getNotam();
 
+	const { siteContactDetails }: GlobalDataProps = await getGlobal();
+
 	return (
 		<article className="mt-24 space-y-8">
 			<section id="hero">
-				<HomeHeroWidget heroActionBlock={heroActionBlock} notam={notam} />
+				<HomeHeroWidget
+					heroActionBlock={heroActionBlock}
+					notam={notam}
+					siteContactDetails={siteContactDetails}
+				/>
 			</section>
 
 			<section id="content">
