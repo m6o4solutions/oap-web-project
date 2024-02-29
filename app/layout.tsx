@@ -8,7 +8,7 @@ import { ToastProvider } from "@/lib/providers/toast-provider";
 
 import "@/app/styles/globals.css";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 /* get the url depending on the environment */
 const absoluteUrl =

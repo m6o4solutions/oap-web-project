@@ -1,4 +1,8 @@
-import { ImageDisplayBlock, NotamDisplayBlock } from "@/components/index";
+import {
+	ContentDisplayBlock,
+	ImageDisplayBlock,
+	NotamDisplayBlock,
+} from "@/components/index";
 
 type HomeHeroWidgetProps = {
 	heroActionBlock: {
@@ -8,11 +12,22 @@ type HomeHeroWidgetProps = {
 		};
 	};
 	notam: { notamMessage: string }[];
+	siteContactDetails: {
+		list: {
+			header: {
+				title: string;
+			};
+			content: {
+				html: string;
+			};
+		}[];
+	};
 };
 
 export const HomeHeroWidget = ({
 	heroActionBlock,
 	notam,
+	siteContactDetails,
 }: HomeHeroWidgetProps) => {
 	return (
 		<div className="mx-1">
@@ -39,20 +54,69 @@ export const HomeHeroWidget = ({
 
 							<div className="px-3 md:w-1/2">
 								<div className="mx-auto mt-5 max-w-full rounded-lg bg-white/70 p-3 lg:mt-0">
-									<h2 className="mb-2 text-lg font-semibold uppercase">
-										Aviation Advisory
-									</h2>
-									<div className="mb-2 rounded-md bg-red-500/50 p-2">
-										{notam.length === 0 ? (
-											<NotamDisplayBlock notice="No NOTAM on record." />
-										) : (
-											notam.map((notice, index) => (
-												<NotamDisplayBlock
-													key={index}
-													notice={notice.notamMessage}
-												/>
-											))
-										)}
+									<div>
+										<h2 className="mb-1 text-lg font-semibold uppercase">
+											Airfield Details
+										</h2>
+
+										<div className="mb-1 flex items-center space-x-1">
+											<p className="font-medium">
+												{siteContactDetails.list[9].header.title}
+											</p>
+
+											<ContentDisplayBlock
+												content={siteContactDetails.list[9].content.html}
+											/>
+										</div>
+
+										<div className="mb-1 flex items-center space-x-1">
+											<p className="font-medium">
+												{siteContactDetails.list[8].header.title}
+											</p>
+
+											<ContentDisplayBlock
+												content={siteContactDetails.list[8].content.html}
+											/>
+										</div>
+
+										<div className="mb-1 flex items-center space-x-1">
+											<p className="font-medium">
+												{siteContactDetails.list[6].header.title}
+											</p>
+
+											<ContentDisplayBlock
+												content={siteContactDetails.list[6].content.html}
+											/>
+										</div>
+
+										<div className="mb-1 flex items-center space-x-1">
+											<p className="font-medium">
+												{siteContactDetails.list[7].header.title}
+											</p>
+
+											<ContentDisplayBlock
+												content={siteContactDetails.list[7].content.html}
+											/>
+										</div>
+									</div>
+
+									<div>
+										<h2 className="mb-1 mt-3 text-lg font-semibold uppercase">
+											Aviation Advisory
+										</h2>
+
+										<div className="mb-1 rounded-md bg-red-500/50 p-2">
+											{notam.length === 0 ? (
+												<NotamDisplayBlock notice="No NOTAM on record." />
+											) : (
+												notam.map((notice, index) => (
+													<NotamDisplayBlock
+														key={index}
+														notice={notice.notamMessage}
+													/>
+												))
+											)}
+										</div>
 									</div>
 								</div>
 							</div>
