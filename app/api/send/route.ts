@@ -11,18 +11,10 @@ export async function POST(request: Request) {
 	try {
 		const body = await request.json();
 
-		const {
-			firstName,
-			lastName,
-			emailAddress,
-			telephoneNumber,
-			messageTitle,
-			messageContent,
-		} = body;
+		const { firstName, lastName, emailAddress, telephoneNumber, messageTitle, messageContent } = body;
 
 		const notification = await resend.emails.send({
-			from: "MTA @ S3 <mta@s3.co.ke>",
-			reply_to: "Hello @ Orly Airpark <hello@orly-airpark.com>",
+			from: "Hello @ Orly Airpark <hello@orly-airpark.com>",
 			to: ["hello@orly-airpark.com"],
 			cc: ["hello@s3interdev.com"],
 			subject: "🛟 New Client Contact Form Message 🛟",
